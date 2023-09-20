@@ -1,0 +1,9 @@
+@use '../partial_files/variables' as *;
+
+.block-page-title-block {
+  h1 {
+    .field--name-title {
+      color: $title_color;
+    }
+  }
+}
