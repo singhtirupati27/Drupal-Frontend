@@ -7,3 +7,28 @@
     }
   }
 }
+
+.additional-content {
+  .region-content-additional {
+    width: 650px;
+    margin: 0 auto;
+    padding: 0 15px;
+    border: 1px solid $dark_blue;
+    border-radius: 8px;
+    color: $light_black;
+
+    > div {
+      padding: 15px 0;
+      border-bottom: 2px solid $dark_blue;
+
+      &:last-child {
+        border-bottom: none;
+      }
+    }
+
+    h2 {
+      color: $dark_yellow;
+      text-align: center;
+    }
+  }
+}

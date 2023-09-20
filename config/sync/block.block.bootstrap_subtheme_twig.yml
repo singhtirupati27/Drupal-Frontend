@@ -1,0 +1,25 @@
+uuid: 4a97b615-f6f1-4197-a14a-2d34c14852cf
+langcode: en
+status: true
+dependencies:
+  content:
+    - 'block_content:basic:dd43b210-3091-436c-a248-a59fa19a95a7'
+  module:
+    - block_content
+  theme:
+    - bootstrap_subtheme
+id: bootstrap_subtheme_twig
+theme: bootstrap_subtheme
+region: content_additional
+weight: -8
+provider: null
+plugin: 'block_content:dd43b210-3091-436c-a248-a59fa19a95a7'
+settings:
+  id: 'block_content:dd43b210-3091-436c-a248-a59fa19a95a7'
+  label: Twig
+  label_display: visible
+  provider: block_content
+  status: true
+  info: ''
+  view_mode: full
+visibility: {  }

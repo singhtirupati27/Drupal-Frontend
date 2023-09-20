@@ -1,0 +1,25 @@
+uuid: 8e3c90b9-89ec-4433-8359-aaa68ecbe956
+langcode: en
+status: true
+dependencies:
+  content:
+    - 'block_content:basic:179cc6ce-c780-4a3a-846b-955abb0e35c6'
+  module:
+    - block_content
+  theme:
+    - bootstrap_subtheme
+id: bootstrap_subtheme_synopsis
+theme: bootstrap_subtheme
+region: content_additional
+weight: -7
+provider: null
+plugin: 'block_content:179cc6ce-c780-4a3a-846b-955abb0e35c6'
+settings:
+  id: 'block_content:179cc6ce-c780-4a3a-846b-955abb0e35c6'
+  label: Synopsis
+  label_display: visible
+  provider: block_content
+  status: true
+  info: ''
+  view_mode: full
+visibility: {  }

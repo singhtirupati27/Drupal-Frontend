@@ -1,0 +1,25 @@
+uuid: a35bb7cd-d713-4f49-8d12-7262fc195e14
+langcode: en
+status: true
+dependencies:
+  config:
+    - system.menu.social-media-link
+  module:
+    - system
+  theme:
+    - bootstrap_subtheme
+id: bootstrap_subtheme_socialmedialink
+theme: bootstrap_subtheme
+region: footer_left
+weight: 0
+provider: null
+plugin: 'system_menu_block:social-media-link'
+settings:
+  id: 'system_menu_block:social-media-link'
+  label: 'Social Media Link'
+  label_display: visible
+  provider: system
+  level: 1
+  depth: 0
+  expand_all_items: false
+visibility: {  }

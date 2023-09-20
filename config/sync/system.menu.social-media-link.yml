@@ -1,0 +1,8 @@
+uuid: bcab670a-5bd7-4066-b9d5-e17a00d522b0
+langcode: en
+status: true
+dependencies: {  }
+id: social-media-link
+label: 'Social Media Link'
+description: ''
+locked: false
