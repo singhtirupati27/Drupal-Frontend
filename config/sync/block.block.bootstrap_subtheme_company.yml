@@ -1,0 +1,25 @@
+uuid: 3c2d1efc-cb90-4acc-a302-eef1ac2a1214
+langcode: en
+status: true
+dependencies:
+  config:
+    - system.menu.company
+  module:
+    - system
+  theme:
+    - bootstrap_subtheme
+id: bootstrap_subtheme_company
+theme: bootstrap_subtheme
+region: footer_right
+weight: 0
+provider: null
+plugin: 'system_menu_block:company'
+settings:
+  id: 'system_menu_block:company'
+  label: Company
+  label_display: visible
+  provider: system
+  level: 1
+  depth: 0
+  expand_all_items: false
+visibility: {  }

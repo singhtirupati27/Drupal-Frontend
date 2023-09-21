@@ -1,0 +1,25 @@
+uuid: 25ce86d9-d0e5-4999-8be7-2194a9a49029
+langcode: en
+status: true
+dependencies:
+  content:
+    - 'block_content:basic:dfd20367-fbb7-4185-9540-c48be86d867f'
+  module:
+    - block_content
+  theme:
+    - bootstrap_subtheme
+id: bootstrap_subtheme_usefulresources
+theme: bootstrap_subtheme
+region: footer_middle
+weight: 0
+provider: null
+plugin: 'block_content:dfd20367-fbb7-4185-9540-c48be86d867f'
+settings:
+  id: 'block_content:dfd20367-fbb7-4185-9540-c48be86d867f'
+  label: 'Useful Resources'
+  label_display: visible
+  provider: block_content
+  status: true
+  info: ''
+  view_mode: full
+visibility: {  }

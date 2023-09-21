@@ -15,10 +15,14 @@ regions:
   nav_additional: 'Additional navigation region (eg search form, social icon, etc)'
   breadcrumb: 'Breadcrumbs'
   content: 'Main content'
+  content_additional: 'Additional content (content will be of color and center)'
   sidebar_first: 'Sidebar first'
   sidebar_second: 'Sidebar second'
   footer: 'Footer'
   footer_bottom: 'Footer bottom'
+  footer_left: 'Footer left'
+  footer_middle: 'Footer middle'
+  footer_right: 'Footer right'
 
 logo: bootstrap-icon.svg
 screenshot: bootstrap5.jpeg

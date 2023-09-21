@@ -116,6 +116,11 @@ set footer_classes = ' ' ~
           {{ page.sidebar_second }}
         </div>
       {% endif %}
+      {% if page.content_additional %}
+        <div class="order-4 mb-3 additional-content">
+          {{ page.content_additional }}
+        </div>
+      {% endif %}
     </div>
   </div>
 
@@ -129,5 +134,26 @@ set footer_classes = ' ' ~
   <div class="{{ b5_top_container }}">
     {{ page.footer_bottom }}
   </div>
+  {% if page.footer_left or page.footer_middle or page.footer_right %}
+    <div class="{{ b5_top_container }} pt-3 footer-extra">
+      <div class="row footer-extra-row">
+        {% if page.footer_left %}
+          <div class="col-4 footer-extra-row__item">
+            {{ page.footer_left }}
+          </div>
+        {% endif %}
+        {% if page.footer_middle %}
+          <div class="col-4 footer-extra-row__item">
+            {{ page.footer_middle }}
+          </div>
+        {% endif %}
+        {% if page.footer_right %}
+          <div class="col-4 footer-extra-row__item">
+            {{ page.footer_right }}
+          </div>
+        {% endif %}
+      </div>
+    </div>
+  {% endif %}
 </footer>
 {% endif %}
