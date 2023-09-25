@@ -1,0 +1,45 @@
+@use '../partial_files/variables' as *;
+
+.blog {
+  &-item {
+    &:first-child {
+      border-right: 5px solid $dark_yellow;
+    }
+
+    &__image {
+      width: 300px;
+      padding: 10px;
+      margin: 0 auto;
+      border-radius: 50%;
+      border: 5px solid $dark_blue;
+
+      img {
+        border-radius: 50%;
+      }
+    }
+
+    &__content {
+      .field {
+        &__label {
+          font-size: 18px;
+          color: $light_black;
+        }
+
+        &__item {
+          p {
+            text-align: justify;
+            color: $light_grey;
+          }
+        }
+      }
+    }
+
+    &__author {
+      div {
+        .field--name-uid {
+          display: block;
+        }
+      }
+    }
+  }
+}
