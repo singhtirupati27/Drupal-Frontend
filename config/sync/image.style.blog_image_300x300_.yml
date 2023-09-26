@@ -1,0 +1,15 @@
+uuid: 3ce1b21f-aaad-48d0-8a9b-ef858cef3fe8
+langcode: en
+status: true
+dependencies: {  }
+name: blog_image_300x300_
+label: 'Blog Image (300x300)'
+effects:
+  dbf9b83f-c6c3-413e-af64-e39d8a3b72b3:
+    uuid: dbf9b83f-c6c3-413e-af64-e39d8a3b72b3
+    id: image_scale_and_crop
+    weight: 1
+    data:
+      width: 300
+      height: 300
+      anchor: center-center

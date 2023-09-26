@@ -5,3 +5,9 @@ global-styling:
       css/style.css: {}
   js:
     js/script.js: {}
+
+blog-style:
+  version: 1.x
+  css:
+    theme:
+      css/blog.css: {}

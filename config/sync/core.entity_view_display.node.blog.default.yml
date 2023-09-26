@@ -1,0 +1,42 @@
+uuid: 2516d5b2-fbef-48e1-9f7d-dc52580addc4
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.field.node.blog.field_blog_description
+    - field.field.node.blog.field_blog_image
+    - image.style.blog_image_300x300_
+    - node.type.blog
+  module:
+    - image
+    - text
+    - user
+id: node.blog.default
+targetEntityType: node
+bundle: blog
+mode: default
+content:
+  field_blog_description:
+    type: text_default
+    label: above
+    settings: {  }
+    third_party_settings: {  }
+    weight: 2
+    region: content
+  field_blog_image:
+    type: image
+    label: above
+    settings:
+      image_link: ''
+      image_style: blog_image_300x300_
+      image_loading:
+        attribute: lazy
+    third_party_settings: {  }
+    weight: 1
+    region: content
+  links:
+    settings: {  }
+    third_party_settings: {  }
+    weight: 0
+    region: content
+hidden: {  }
