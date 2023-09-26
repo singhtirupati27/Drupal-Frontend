@@ -1,0 +1,7 @@
+@mixin padding($tb, $lr) {
+  padding: $tb $lr;
+}
+
+@mixin border($radius) {
+  border-radius: $radius;
+}

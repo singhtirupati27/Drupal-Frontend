@@ -11,3 +11,15 @@ blog-style:
   css:
     theme:
       css/blog.css: {}
+
+todo:
+  version: 1.x
+  css:
+    theme:
+      css/todo.css: {}
+  js:
+    js/todo.js: {}
+  dependencies:
+    - core/drupal
+    - core/jquery
+    - core/once

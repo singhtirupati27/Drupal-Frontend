@@ -1,0 +1,49 @@
+* {
+  margin: 0;
+  padding: 0;
+}
+
+ol {
+  margin-bottom: 0;
+}
+
+.todo {
+  background-color: #e0d6e9;
+  max-width: 700px;
+  margin: 0 auto;
+  padding: 15px 15px;
+  border-radius: 8px;
+}
+
+input {
+  width: 100%;
+  color: green;
+  background-color: #e0d6e9;
+  margin-bottom: 10px;
+  border-color: #007a82;
+  outline: none;
+  padding: 15px 15px;
+  border-radius: 8px;
+}
+
+#block-bootstrap-subtheme-page-title h1 {
+  text-align: center;
+}
+
+.todo-input #todo-submit {
+  margin-left: 0;
+}
+.todo-list-item {
+  padding-top: 15px;
+}
+.todo-list-item #todo-list-empty {
+  display: none;
+  color: red;
+}
+.todo-list-item__saved-item li {
+  color: #007a82;
+  background-color: #f8f8ff;
+  padding: 10px 10px;
+  border-radius: 8px;
+  margin-bottom: 5px;
+}/*# sourceMappingURL=todo.css.map */
