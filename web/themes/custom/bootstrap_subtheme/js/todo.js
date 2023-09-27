@@ -7,23 +7,25 @@
   Drupal.behaviors.todoBehavior = {
     attach: function (context, settings) {
       // Apply the newTodo effect to the elements only once.
-      once('newTodo', '#todo-list', context).forEach(function (element) {
-        $('#todo-submit').on('click', function(event) {
-          // Prevents the default behavior
-          event.preventDefault();
-          var $todoInput = $('#todo-list').val();
-          $('#todo-list-empty').hide();
-          $('#saved-item-ul').show();
-          $('#saved-item-ul').append('<li>' + $todoInput + '</li>');
+      const $listElement = $('#todo-list');
+      const $savedItemUl = $('#saved-item-ul');
+      const $emptyList = $('#todo-list-empty');
+      const todoListName = 'todo-list-item';
+      let todoList = JSON.parse(localStorage.getItem(todoListName));
+
+      once('newTodo', $listElement, context).forEach(function (element) {
+        $('#todo-submit').on('click', function (event) {
+          var $todoInput = $($listElement).val();
+          $($emptyList).hide();
+          $($savedItemUl).show();
+          $($savedItemUl).append(`<li>${$todoInput}</li>`);
           saveTodoItem($todoInput);
         });
 
-        $('#todo-clear').on('click', function(event) {
-          // Prevents the default behavior
-          event.preventDefault();
+        $('#todo-clear').on('click', function (event) {
           deleteTodoList();
-          $('#saved-item-ul').hide();
-          $('#todo-list-empty').show();
+          $($savedItemUl).hide();
+          $($emptyList).show();
         });
 
         /**
@@ -33,22 +35,21 @@
          *   Holds element from input tag.
          */
         function saveTodoItem($inputItem) {
-          // If todo-list is empty then initialise empty array and if not then
-          // get todo-list item and parse into array.
-          var itemList = localStorage.getItem('todo-list') ? JSON.parse(localStorage.getItem('todo-list')) : [];
+          // If todo-list-item is empty then initialise empty array and if not then
+          // get todo-list-item item and parse into array.
+          var itemList = localStorage.getItem(todoListName) ? JSON.parse(localStorage.getItem(todoListName)) : [];
           itemList.push($inputItem);
           // Convert js array into string and save on localStorage.
-          localStorage.setItem('todo-list', JSON.stringify(itemList));
+          localStorage.setItem(todoListName, JSON.stringify(itemList));
         }
 
-        var todoList = JSON.parse(localStorage.getItem('todo-list'));
         // Check if todoList is null or not.
         if (todoList !== null) {
           $(todoList).each(showTodoList);
         }
         else {
-          $('#todo-list-empty').show();
-          $('#saved-item-ul').hide();
+          $($emptyList).show();
+          $($savedItemUl).hide();
         }
 
         /**
@@ -59,15 +60,15 @@
          *   Holds value at index.
          */
         function showTodoList(index, element) {
-          element = "<li>" + element + "</li>";
-          $('#saved-item-ul').append(element);
+          element = `<li>${element}</li>`;
+          $($savedItemUl).append(element);
         }
 
         /**
          * Function to clear all localStorage data.
          */
         function deleteTodoList() {
-          localStorage.removeItem('todo-list');
+          localStorage.removeItem(todoListName);
         }
       });
     }
