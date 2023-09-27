@@ -1,0 +1,26 @@
+@use '../partial_files/importers' as *;
+
+.custom-render-color {
+  &__item {
+    text-transform: uppercase;
+    font-weight: bold;
+    list-style: none;
+
+    li {
+      display: inline-block;
+      @include padding(10px, 15px);
+    }
+
+    &__red {
+      color: $color_red;
+    }
+
+    &__green {
+      color: $title_color;
+    }
+
+    &__blue {
+      color: $blue;
+    }
+  }
+}

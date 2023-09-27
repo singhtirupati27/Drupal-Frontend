@@ -11,3 +11,9 @@ blog-style:
   css:
     theme:
       css/blog.css: {}
+
+custom-render:
+  version: 1.x
+  css:
+    theme:
+      css/custom-render.css: {}

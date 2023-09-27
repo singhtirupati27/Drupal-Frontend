@@ -1,0 +1,54 @@
+<?php
+
+/**
+ * @file
+ * Provides functionality to add theme suggestions and pass variables.
+ */
+
+/**
+ * Implements hook_preprocess().
+ */
+function bootstrap_subtheme_preprocess(&$variables, $hook) {
+  // Get current node id.
+  $node_id = getNodeId();
+  // Check whether the node id is of required node or not.
+  if ($node_id === '17') {
+    // Check if hook is html.
+    if ($hook === 'html') {
+      $variables['attributes']['class'][] = 'custom-render';
+    }
+    // Check if hook is node
+    if ($hook === 'node') {
+      $colors = [
+        'color1' => 'red',
+        'color2' => 'green',
+        'color3' => 'blue',
+      ];
+      $variables['colors'] = $colors;
+      $variables['#attached']['library'][] = 'bootstrap_subtheme/custom-render';
+    }
+  }
+}
+
+/**
+ * Implements hook_theme_suggestions_HOOK_alter().
+*/
+function bootstrap_subtheme_theme_suggestions_node_alter(array &$suggestions, array $variables) {
+  // Get current node id.
+  $node_id = getNodeId();
+  // Check whether the node id is of required node or not.
+  if ($node_id === '17') {
+    $suggestions[] = 'node__custom_render';
+  }
+}
+
+/**
+ * Funtion to get node id.
+ *
+ * @return string
+ *   Return the node id.
+ */
+function getNodeId(): string {
+  $node_id = \Drupal::routeMatch()->getParameter('node')->Id();
+  return $node_id;
+}

@@ -1,0 +1,18 @@
+.custom-render-color__item {
+  text-transform: uppercase;
+  font-weight: bold;
+  list-style: none;
+}
+.custom-render-color__item li {
+  display: inline-block;
+  padding: 10px 15px;
+}
+.custom-render-color__item__red {
+  color: red;
+}
+.custom-render-color__item__green {
+  color: green;
+}
+.custom-render-color__item__blue {
+  color: blue;
+}/*# sourceMappingURL=custom-render.css.map */
