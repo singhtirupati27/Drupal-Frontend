@@ -12,15 +12,15 @@
     }
 
     &__red {
-      color: $color_red;
+      color: var(--color-red);
     }
 
     &__green {
-      color: $title_color;
+      color: var(--color-green);
     }
 
     &__blue {
-      color: $blue;
+      color: var(--color-blue);
     }
   }
 }

@@ -1,3 +1,9 @@
+:root {
+  --color-red: red;
+  --color-green: green;
+  --color-blue: blue;
+}
+
 .custom-render-color__item {
   text-transform: uppercase;
   font-weight: bold;
@@ -8,11 +14,11 @@
   padding: 10px 15px;
 }
 .custom-render-color__item__red {
-  color: red;
+  color: var(--color-red);
 }
 .custom-render-color__item__green {
-  color: green;
+  color: var(--color-green);
 }
 .custom-render-color__item__blue {
-  color: blue;
+  color: var(--color-blue);
 }/*# sourceMappingURL=custom-render.css.map */
