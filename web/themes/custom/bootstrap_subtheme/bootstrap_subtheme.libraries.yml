@@ -17,3 +17,15 @@ custom-render:
   css:
     theme:
       css/custom-render.css: {}
+
+todo:
+  version: 1.x
+  css:
+    theme:
+      css/todo.css: {}
+  js:
+    js/todo.js: {}
+  dependencies:
+    - core/drupal
+    - core/jquery
+    - core/once

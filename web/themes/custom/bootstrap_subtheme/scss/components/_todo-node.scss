@@ -1,0 +1,34 @@
+@use '../partial_files/importers' as *;
+
+#block-bootstrap-subtheme-page-title {
+  h1 {
+    text-align: center;
+  }
+}
+
+.todo {
+  &-input {
+    #todo-submit {
+      margin-left: 0;
+    }
+  }
+
+  &-list-item {
+    padding-top: 15px;
+
+    #todo-list-empty {
+      display: none;
+      color: $color_red;
+    }
+
+    &__saved-item {
+      li {
+        color: $dark_blue;
+        background-color: $ghost_white;
+        @include padding(10px, 10px);
+        @include border(8px);
+        margin-bottom: 5px;
+      }
+    }
+  }
+}

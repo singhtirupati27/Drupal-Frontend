@@ -5,3 +5,30 @@
   --color-green: #{$title_color};
   --color-blue: #{$blue};
 }
+* {
+  margin: 0;
+  padding: 0;
+}
+
+ol {
+  margin-bottom: 0;
+}
+
+.todo {
+  background-color: $light_pink;
+  max-width: 700px;
+  margin: 0 auto;
+  @include padding(15px, 15px);
+  @include border(8px);
+}
+
+input {
+  width: 100%;
+  color: $title_color;
+  background-color: $light_pink;
+  margin-bottom: 10px;
+  border-color: $dark_blue;
+  outline: none;
+  @include padding(15px, 15px);
+  @include border(8px);
+}
